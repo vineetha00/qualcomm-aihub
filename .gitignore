@@ -1,0 +1,24 @@
+# secrets
+.qai_token
+# envs / caches
+.venv/
+.venv_llm/
+__pycache__/
+# datasets & model binaries (large)
+imagenette2-320/
+imagenette2-320.tgz
+*.tflite
+*.onnx
+*.bin
+*.serialized
+llm_export/
+export_assets/
+# run markers
+DONE
+FAILED
+EVAL_DONE
+EVAL_FAILED
+LLM_DONE
+LLM_FAILED
+eval_attempt1.log
+run.command

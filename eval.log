@@ -1,0 +1,31 @@
+=== EVAL START Sat Sep 12 12:08:08 PDT 2026
+[12:08:09] tflite runtime: ai-edge-litert
+[12:08:09] mnv2_int8.tflite: 4.02 MB
+[12:08:09] mnv2_fp32.tflite: 13.97 MB
+[12:08:09] downloading imagenette2-320.tgz (~340 MB)
+[12:09:36] extracting
+/Users/vineetha/projects/qualcomm-aihub/eval_accuracy.py:47: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  t.extractall(".")
+[12:09:38] 3925 validation images
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+[12:09:38] mnv2_fp32.tflite: input (np.int32(1), np.int32(3), np.int32(224), np.int32(224)) float32 q=(0.0, 0) layout=NCHW; output (np.int32(1), np.int32(1000)) float32
+[12:09:38] mnv2_int8.tflite: input (np.int32(1), np.int32(3), np.int32(224), np.int32(224)) int8 q=(0.01865844801068306, -14) layout=NCHW; output (np.int32(1), np.int32(1000)) int8
+[12:09:56] 500/3925 (15s)
+[12:10:10] 1000/3925 (29s)
+[12:10:24] 1500/3925 (43s)
+[12:10:39] 2000/3925 (57s)
+[12:10:54] 2500/3925 (72s)
+[12:11:08] 3000/3925 (87s)
+[12:11:23] 3500/3925 (102s)
+
+==================== ACCURACY ====================
+Imagenette val, 3925 images, ai-edge-litert
+model                 top1(1000)  top5(1000)  top1(10cls)
+fp32_tflite               79.03%      95.69%       99.29%
+int8_tflite               78.85%      95.31%       99.31%
+pytorch_fp32_ref          79.03%      95.69%       99.29%
+
+INT8 vs FP32 top-1 agreement : 94.39%
+INT8 top-1 drop vs FP32      : +0.18 pct points
+==================================================
+=== EVAL END rc=0 Sat Sep 12 12:11:39 PDT 2026

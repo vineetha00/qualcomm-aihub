@@ -1,0 +1,25 @@
+{
+ "n_images": 3925,
+ "runtime": "ai-edge-litert",
+ "split": "imagenette2-320/val",
+ "preprocess": "resize256 + centercrop224 + imagenet norm",
+ "models": {
+  "fp32_tflite": {
+   "top1_1000class": 0.7903184713375796,
+   "top5_1000class": 0.9569426751592357,
+   "top1_10class_restricted": 0.9928662420382166
+  },
+  "int8_tflite": {
+   "top1_1000class": 0.7885350318471338,
+   "top5_1000class": 0.9531210191082803,
+   "top1_10class_restricted": 0.9931210191082802
+  },
+  "pytorch_fp32_ref": {
+   "top1_1000class": 0.7903184713375796,
+   "top5_1000class": 0.9569426751592357,
+   "top1_10class_restricted": 0.9928662420382166
+  }
+ },
+ "int8_vs_fp32_prediction_agreement": 0.9439490445859873,
+ "top1_drop_int8_vs_fp32_pct_points": 0.1783439490445793
+}

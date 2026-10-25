@@ -1,0 +1,39 @@
+{
+ "device": "Samsung Galaxy S24 (Family)",
+ "model": "torchvision mobilenet_v2 IMAGENET1K_V1",
+ "job_compile_onnx_fp32": "https://workbench.aihub.qualcomm.com/jobs/jp0m3mn2g/",
+ "calibration": "100 imagenette images",
+ "job_quantize": "https://workbench.aihub.qualcomm.com/jobs/jp8e0elzp/",
+ "job_compile_tflite_int8": "https://workbench.aihub.qualcomm.com/jobs/jp3zvzyx5/",
+ "job_compile_tflite_fp32": "https://workbench.aihub.qualcomm.com/jobs/jgolklj4g/",
+ "int8": {
+  "job": "https://workbench.aihub.qualcomm.com/jobs/jgjrzrj7p/",
+  "device_actual": "Device(name='Samsung Galaxy S24 (Family)', os='14', attributes=['os:android', 'framework:tflite', 'framework:onnx', 'abi:aarch64-android', 'vendor:samsung', 'format:phone', 'chipset:qualcomm-snapdragon-8gen3', 'chipset:sm8650', 'hexagon:v75', 'soc-model:57', 'htp-supports-fp16:true', 'htp-supports-weight-sharing:true', 'framework:qnn'])",
+  "estimated_inference_time": 282,
+  "estimated_inference_peak_memory": 149278720,
+  "first_load_time": 588970,
+  "first_load_peak_memory": 162500608,
+  "warm_load_time": 159304,
+  "warm_load_peak_memory": 171933696,
+  "compile_time": 0,
+  "compile_peak_memory": 0,
+  "layers_by_compute_unit": {
+   "NPU": 105
+  }
+ },
+ "fp32": {
+  "job": "https://workbench.aihub.qualcomm.com/jobs/jpe7e7j75/",
+  "device_actual": "Device(name='Samsung Galaxy S24 (Family)', os='14', attributes=['os:android', 'framework:tflite', 'framework:onnx', 'abi:aarch64-android', 'vendor:samsung', 'format:phone', 'chipset:qualcomm-snapdragon-8gen3', 'chipset:sm8650', 'hexagon:v75', 'soc-model:57', 'htp-supports-fp16:true', 'htp-supports-weight-sharing:true', 'framework:qnn'])",
+  "estimated_inference_time": 369,
+  "estimated_inference_peak_memory": 210489344,
+  "first_load_time": 537560,
+  "first_load_peak_memory": 189030400,
+  "warm_load_time": 159339,
+  "warm_load_peak_memory": 211144704,
+  "compile_time": 0,
+  "compile_peak_memory": 0,
+  "layers_by_compute_unit": {
+   "NPU": 70
+  }
+ }
+}

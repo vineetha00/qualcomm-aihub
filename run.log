@@ -1,0 +1,209 @@
+=== START Sat Sep 12 11:50:56 PDT 2026
+Using CPython 3.12.12
+Creating virtual environment at: .venv
+Activate with: source .venv/bin/activate
+Python 3.12.12
+Resolved 36 packages in 541ms
+Downloading networkx (2.0MiB)
+Downloading numpy (5.2MiB)
+Downloading botocore (15.1MiB)
+Downloading pillow (4.6MiB)
+Downloading sympy (6.0MiB)
+Downloading onnx (19.2MiB)
+Downloading torch (121.4MiB)
+Downloading torchvision (1.7MiB)
+Downloading h5py (2.9MiB)
+ Downloaded torchvision
+ Downloaded networkx
+ Downloaded h5py
+ Downloaded pillow
+ Downloaded numpy
+ Downloaded sympy
+ Downloaded botocore
+ Downloaded onnx
+ Downloaded torch
+Prepared 25 packages in 15.94s
+Installed 36 packages in 458ms
+ + backoff==2.2.1
+ + botocore==1.43.93
+ + certifi==2026.7.22
+ + charset-normalizer==3.5.1
+ + deprecation==2.1.0
+ + filelock==3.32.6
+ + fsspec==2026.7.0
+ + h5py==3.16.0
+ + idna==3.19
+ + jinja2==3.1.6
+ + jmespath==1.1.0
+ + markupsafe==3.0.3
+ + ml-dtypes==0.6.0
+ + mpmath==1.3.0
+ + networkx==3.6.1
+ + numpy==2.5.3
+ + onnx==1.22.0
+ + packaging==26.3
+ + pillow==12.3.0
+ + prettytable==3.18.0
+ + protobuf==6.31.1
+ + python-dateutil==2.9.0.post0
+ + qai-hub==0.55.0
+ + requests==2.34.2
+ + requests-toolbelt==1.0.0
+ + s3transfer==0.13.1
+ + semver==3.1.0
+ + setuptools==84.0.0
+ + six==1.17.0
+ + sympy==1.14.0
+ + torch==2.14.0
+ + torchvision==0.29.0
+ + tqdm==4.70.1
+ + typing-extensions==4.16.0
+ + urllib3==2.7.0
+ + wcwidth==0.8.3
+2026-09-12 11:51:24.486 - INFO - Enabling verbose logging.
+qai-hub configuration saved to /Users/vineetha/.qai_hub/client.ini
+==================== /Users/vineetha/.qai_hub/client.ini ====================
+[api]
+api_token = <REDACTED>
+api_url = https://workbench.aihub.qualcomm.com
+web_url = https://workbench.aihub.qualcomm.com
+verbose = True
+client_mode = cli
+
+
+configured qai-hub
+--- device check:
+|   Samsung Galaxy S24 (Family)   |  Android 14  | Samsung  |  Phone  |             qualcomm-snapdragon-8gen3, sm8650             |   --device "Samsung Galaxy S24 (Family)" --device-os 14    |
+|        Samsung Galaxy S24       |  Android 14  | Samsung  |  Phone  |             qualcomm-snapdragon-8gen3, sm8650             |        --device "Samsung Galaxy S24" --device-os 14        |
+|     Samsung Galaxy S24 Ultra    |  Android 14  | Samsung  |  Phone  |             qualcomm-snapdragon-8gen3, sm8650             |     --device "Samsung Galaxy S24 Ultra" --device-os 14     |
+|       Samsung Galaxy S24+       |  Android 14  | Samsung  |  Phone  |             qualcomm-snapdragon-8gen3, sm8650             |       --device "Samsung Galaxy S24+" --device-os 14        |
+[11:51:49] exporting MobileNetV2 with torch.export
+Downloading: "https://download.pytorch.org/models/mobilenet_v2-b0353104.pth" to /Users/vineetha/.cache/torch/hub/checkpoints/mobilenet_v2-b0353104.pth
+  0%|          | 0.00/13.6M [00:00<?, ?B/s]  5%|▍         | 640k/13.6M [00:00<00:02, 6.50MB/s] 20%|██        | 2.75M/13.6M [00:00<00:00, 13.1MB/s] 30%|██▉       | 4.00M/13.6M [00:00<00:00, 11.1MB/s] 69%|██████▉   | 9.38M/13.6M [00:00<00:00, 25.8MB/s] 91%|█████████▏| 12.4M/13.6M [00:00<00:00, 27.2MB/s]100%|██████████| 13.6M/13.6M [00:00<00:00, 22.7MB/s]
+Uploading tmpzfvgh5z6.pt2:   0%|[34m          [0m| 0.00/14.7M [00:00<?, ?B/s]Uploading tmpzfvgh5z6.pt2:   7%|[34m▋         [0m| 1.00M/14.7M [00:00<00:01, 8.18MB/s]Uploading tmpzfvgh5z6.pt2:  14%|[34m█▎        [0m| 2.00M/14.7M [00:00<00:01, 7.63MB/s]Uploading tmpzfvgh5z6.pt2:  27%|[34m██▋       [0m| 4.00M/14.7M [00:00<00:01, 5.95MB/s]Uploading tmpzfvgh5z6.pt2:  34%|[34m███▍      [0m| 5.00M/14.7M [00:00<00:01, 6.77MB/s]Uploading tmpzfvgh5z6.pt2:  41%|[34m████      [0m| 6.00M/14.7M [00:02<00:05, 1.80MB/s]Uploading tmpzfvgh5z6.pt2:  48%|[34m████▊     [0m| 7.00M/14.7M [00:03<00:04, 1.69MB/s]Uploading tmpzfvgh5z6.pt2:  54%|[34m█████▍    [0m| 8.00M/14.7M [00:03<00:03, 1.89MB/s]Uploading tmpzfvgh5z6.pt2:  61%|[34m██████    [0m| 9.00M/14.7M [00:03<00:02, 2.15MB/s]Uploading tmpzfvgh5z6.pt2:  68%|[34m██████▊   [0m| 10.0M/14.7M [00:04<00:01, 2.48MB/s]Uploading tmpzfvgh5z6.pt2:  75%|[34m███████▍  [0m| 11.0M/14.7M [00:04<00:01, 2.86MB/s]Uploading tmpzfvgh5z6.pt2:  82%|[34m████████▏ [0m| 12.0M/14.7M [00:04<00:00, 3.25MB/s]Uploading tmpzfvgh5z6.pt2:  88%|[34m████████▊ [0m| 13.0M/14.7M [00:04<00:00, 3.58MB/s]Uploading tmpzfvgh5z6.pt2:  95%|[34m█████████▌[0m| 14.0M/14.7M [00:04<00:00, 3.86MB/s]Uploading tmpzfvgh5z6.pt2: 100%|[34m██████████[0m| 14.7M/14.7M [00:05<00:00, 3.72MB/s]Uploading tmpzfvgh5z6.pt2: 100%|[34m██████████[0m| 14.7M/14.7M [00:05<00:00, 2.80MB/s]
+Scheduled compile job (jp0m3mn2g) successfully. To see the status and results:
+    https://workbench.aihub.qualcomm.com/jobs/jp0m3mn2g/
+
+[11:52:00] compile_onnx_fp32: submitted -> https://workbench.aihub.qualcomm.com/jobs/jp0m3mn2g/
+Waiting for compile job (jp0m3mn2g) completion. Type Ctrl+C to stop waiting at any time.
+    ⏳ CREATED               ░░ 0/2        ⏳ CREATED               ░░ 0/2 .      ⏳ CREATED               ░░ 0/2 ..     ⏳ CREATED               ░░ 0/2 ...    ⏳ CREATED               ░░ 0/2        ⏳ CREATED               ░░ 0/2 .      ⏳ CREATED               ░░ 0/2 ..     ⏳ CREATED               ░░ 0/2 ...    ⏳ CREATED               ░░ 0/2        ⏳ CREATED               ░░ 0/2 .      ⏳ OPTIMIZING_MODEL      █░ 1/2 ..     ⏳ OPTIMIZING_MODEL      █░ 1/2 ...    ⏳ OPTIMIZING_MODEL      █░ 1/2        ⏳ OPTIMIZING_MODEL      █░ 1/2 .      ⏳ OPTIMIZING_MODEL      █░ 1/2 ..     ⏳ OPTIMIZING_MODEL      █░ 1/2 ...    ⏳ OPTIMIZING_MODEL      █░ 1/2        ⏳ OPTIMIZING_MODEL      █░ 1/2 .      ⏳ OPTIMIZING_MODEL      █░ 1/2 ..     ⏳ OPTIMIZING_MODEL      █░ 1/2 ...    ⏳ OPTIMIZING_MODEL      █░ 1/2        ⏳ OPTIMIZING_MODEL      █░ 1/2 .      ⏳ OPTIMIZING_MODEL      █░ 1/2 ..     ⏳ OPTIMIZING_MODEL      █░ 1/2 ...    ⏳ OPTIMIZING_MODEL      █░ 1/2        ⏳ OPTIMIZING_MODEL      █░ 1/2 .      ⏳ OPTIMIZING_MODEL      █░ 1/2 ..     ⏳ OPTIMIZING_MODEL      █░ 1/2 ...    ⏳ OPTIMIZING_MODEL      █░ 1/2        ⏳ OPTIMIZING_MODEL      █░ 1/2 .      ⏳ OPTIMIZING_MODEL      █░ 1/2 ..     ⏳ OPTIMIZING_MODEL      █░ 1/2 ...    ⏳ OPTIMIZING_MODEL      █░ 1/2        ⏳ OPTIMIZING_MODEL      █░ 1/2 .      ⏳ OPTIMIZING_MODEL      █░ 1/2 ..     ⏳ OPTIMIZING_MODEL      █░ 1/2 ...    ⏳ OPTIMIZING_MODEL      █░ 1/2        ⏳ OPTIMIZING_MODEL      █░ 1/2 .      ⏳ OPTIMIZING_MODEL      █░ 1/2 ..     ⏳ OPTIMIZING_MODEL      █░ 1/2 ...    ✅ SUCCESS                          
+[11:52:41] compile_onnx_fp32: JobStatus
+---------
+code    : SUCCESS
+message : 
+
+[11:52:41] downloading imagenette calibration samples
+[11:52:43] calibration set: 100 imagenette images
+Uploading dataset:   0%|[34m          [0m| 0.00/18.3M [00:00<?, ?B/s]Uploading dataset:   5%|[34m▌         [0m| 1.00M/18.3M [00:00<00:02, 8.60MB/s]Uploading dataset:  11%|[34m█         [0m| 2.00M/18.3M [00:00<00:02, 7.32MB/s]Uploading dataset:  22%|[34m██▏       [0m| 4.00M/18.3M [00:00<00:01, 10.1MB/s]Uploading dataset:  27%|[34m██▋       [0m| 5.00M/18.3M [00:00<00:02, 5.47MB/s]Uploading dataset:  33%|[34m███▎      [0m| 6.00M/18.3M [00:01<00:04, 3.17MB/s]Uploading dataset:  38%|[34m███▊      [0m| 7.00M/18.3M [00:01<00:03, 3.74MB/s]Uploading dataset:  44%|[34m████▎     [0m| 8.00M/18.3M [00:01<00:03, 3.48MB/s]Uploading dataset:  49%|[34m████▉     [0m| 9.00M/18.3M [00:02<00:02, 3.40MB/s]Uploading dataset:  55%|[34m█████▍    [0m| 10.0M/18.3M [00:02<00:02, 3.86MB/s]Uploading dataset:  60%|[34m██████    [0m| 11.0M/18.3M [00:02<00:02, 3.69MB/s]Uploading dataset:  66%|[34m██████▌   [0m| 12.0M/18.3M [00:03<00:01, 3.48MB/s]Uploading dataset:  71%|[34m███████   [0m| 13.0M/18.3M [00:03<00:01, 3.75MB/s]Uploading dataset:  77%|[34m███████▋  [0m| 14.0M/18.3M [00:03<00:01, 4.03MB/s]Uploading dataset:  82%|[34m████████▏ [0m| 15.0M/18.3M [00:03<00:00, 4.20MB/s]Uploading dataset:  87%|[34m████████▋ [0m| 16.0M/18.3M [00:04<00:00, 4.34MB/s]Uploading dataset:  93%|[34m█████████▎[0m| 17.0M/18.3M [00:04<00:00, 3.87MB/s]Uploading dataset:  98%|[34m█████████▊[0m| 18.0M/18.3M [00:04<00:00, 4.10MB/s]Uploading dataset: 100%|[34m██████████[0m| 18.3M/18.3M [00:05<00:00, 3.83MB/s]
+Scheduled quantize job (jp8e0elzp) successfully. To see the status and results:
+    https://workbench.aihub.qualcomm.com/jobs/jp8e0elzp/
+
+[11:52:50] quantize_int8: submitted -> https://workbench.aihub.qualcomm.com/jobs/jp8e0elzp/
+Waiting for quantize job (jp8e0elzp) completion. Type Ctrl+C to stop waiting at any time.
+    ⏳ CREATED               ░░ 0/2        ⏳ CREATED               ░░ 0/2 .      ⏳ CREATED               ░░ 0/2 ..     ⏳ CREATED               ░░ 0/2 ...    ⏳ CREATED               ░░ 0/2        ⏳ CREATED               ░░ 0/2 .      ⏳ CREATED               ░░ 0/2 ..     ⏳ CREATED               ░░ 0/2 ...    ⏳ CREATED               ░░ 0/2        ⏳ CREATED               ░░ 0/2 .      ⏳ CREATED               ░░ 0/2 ..     ⏳ CREATED               ░░ 0/2 ...    ⏳ CREATED               ░░ 0/2        ⏳ CREATED               ░░ 0/2 .      ⏳ CREATED               ░░ 0/2 ..     ⏳ CREATED               ░░ 0/2 ...    ⏳ CREATED               ░░ 0/2        ⏳ CREATED               ░░ 0/2 .      ⏳ CREATED               ░░ 0/2 ..     ⏳ CREATED               ░░ 0/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ⏳ QUANTIZING_MODEL      █░ 1/2 ..     ⏳ QUANTIZING_MODEL      █░ 1/2 ...    ⏳ QUANTIZING_MODEL      █░ 1/2        ⏳ QUANTIZING_MODEL      █░ 1/2 .      ✅ SUCCESS                          
+[11:57:06] quantize_int8: JobStatus
+---------
+code    : SUCCESS
+message : 
+
+Scheduled compile job (jp3zvzyx5) successfully. To see the status and results:
+    https://workbench.aihub.qualcomm.com/jobs/jp3zvzyx5/
+
+Scheduled compile job (jgolklj4g) successfully. To see the status and results:
+    https://workbench.aihub.qualcomm.com/jobs/jgolklj4g/
+
+[11:57:07] compile_tflite_int8: submitted -> https://workbench.aihub.qualcomm.com/jobs/jp3zvzyx5/
+Waiting for compile job (jp3zvzyx5) completion. Type Ctrl+C to stop waiting at any time.
+    ⏳ CREATED               ░░ 0/2        ⏳ CREATED               ░░ 0/2 .      ⏳ CREATED               ░░ 0/2 ..     ⏳ CREATED               ░░ 0/2 ...    ⏳ CREATED               ░░ 0/2        ⏳ CREATED               ░░ 0/2 .      ⏳ CREATED               ░░ 0/2 ..     ⏳ CREATED               ░░ 0/2 ...    ⏳ CREATED               ░░ 0/2        ⏳ CREATED               ░░ 0/2 .      ⏳ CREATED               ░░ 0/2 ..     ⏳ CREATED               ░░ 0/2 ...    ⏳ CREATED               ░░ 0/2        ⏳ CREATED               ░░ 0/2 .      ⏳ CREATED               ░░ 0/2 ..     ⏳ CREATED               ░░ 0/2 ...    ⏳ CREATED               ░░ 0/2        ⏳ CREATED               ░░ 0/2 .      ⏳ CREATED               ░░ 0/2 ..     ⏳ CREATED               ░░ 0/2 ...    ⏳ OPTIMIZING_MODEL      █░ 1/2        ⏳ OPTIMIZING_MODEL      █░ 1/2 .      ⏳ OPTIMIZING_MODEL      █░ 1/2 ..     ⏳ OPTIMIZING_MODEL      █░ 1/2 ...    ⏳ OPTIMIZING_MODEL      █░ 1/2        ⏳ OPTIMIZING_MODEL      █░ 1/2 .      ⏳ OPTIMIZING_MODEL      █░ 1/2 ..     ⏳ OPTIMIZING_MODEL      █░ 1/2 ...    ⏳ OPTIMIZING_MODEL      █░ 1/2        ⏳ OPTIMIZING_MODEL      █░ 1/2 .      ⏳ OPTIMIZING_MODEL      █░ 1/2 ..     ⏳ OPTIMIZING_MODEL      █░ 1/2 ...    ⏳ OPTIMIZING_MODEL      █░ 1/2        ⏳ OPTIMIZING_MODEL      █░ 1/2 .      ⏳ OPTIMIZING_MODEL      █░ 1/2 ..     ⏳ OPTIMIZING_MODEL      █░ 1/2 ...    ⏳ OPTIMIZING_MODEL      █░ 1/2        ⏳ OPTIMIZING_MODEL      █░ 1/2 .      ⏳ OPTIMIZING_MODEL      █░ 1/2 ..     ⏳ OPTIMIZING_MODEL      █░ 1/2 ...    ⏳ OPTIMIZING_MODEL      █░ 1/2        ⏳ OPTIMIZING_MODEL      █░ 1/2 .      ⏳ OPTIMIZING_MODEL      █░ 1/2 ..     ⏳ OPTIMIZING_MODEL      █░ 1/2 ...    ⏳ OPTIMIZING_MODEL      █░ 1/2        ⏳ OPTIMIZING_MODEL      █░ 1/2 .      ⏳ OPTIMIZING_MODEL      █░ 1/2 ..     ⏳ OPTIMIZING_MODEL      █░ 1/2 ...    ⏳ OPTIMIZING_MODEL      █░ 1/2        ⏳ OPTIMIZING_MODEL      █░ 1/2 .      ✅ SUCCESS                          
+[11:57:59] compile_tflite_int8: JobStatus
+---------
+code    : SUCCESS
+message : 
+
+[11:57:59] compile_tflite_fp32: submitted -> https://workbench.aihub.qualcomm.com/jobs/jgolklj4g/
+[11:57:59] compile_tflite_fp32: JobStatus
+---------
+code    : SUCCESS
+message : 
+
+Scheduled profile job (jgjrzrj7p) successfully. To see the status and results:
+    https://workbench.aihub.qualcomm.com/jobs/jgjrzrj7p/
+
+Scheduled profile job (jpe7e7j75) successfully. To see the status and results:
+    https://workbench.aihub.qualcomm.com/jobs/jpe7e7j75/
+
+[11:58:00] profile_int8: submitted -> https://workbench.aihub.qualcomm.com/jobs/jgjrzrj7p/
+Waiting for profile job (jgjrzrj7p) completion. Type Ctrl+C to stop waiting at any time.
+    ⏳ CREATED               ░░░ 0/3        ⏳ CREATED               ░░░ 0/3 .      ⏳ CREATED               ░░░ 0/3 ..     ⏳ CREATED               ░░░ 0/3 ...    ⏳ CREATED               ░░░ 0/3        ⏳ CREATED               ░░░ 0/3 .      ⏳ CREATED               ░░░ 0/3 ..     ⏳ CREATED               ░░░ 0/3 ...    ⏳ CREATED               ░░░ 0/3        ⏳ CREATED               ░░░ 0/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ PROVISIONING_DEVICE   █░░ 1/3 ..     ⏳ PROVISIONING_DEVICE   █░░ 1/3 ...    ⏳ PROVISIONING_DEVICE   █░░ 1/3        ⏳ PROVISIONING_DEVICE   █░░ 1/3 .      ⏳ MEASURING_PERFORMANCE ██░ 2/3 ..     ⏳ MEASURING_PERFORMANCE ██░ 2/3 ...    ⏳ MEASURING_PERFORMANCE ██░ 2/3        ⏳ MEASURING_PERFORMANCE ██░ 2/3 .      ⏳ MEASURING_PERFORMANCE ██░ 2/3 ..     ⏳ MEASURING_PERFORMANCE ██░ 2/3 ...    ⏳ MEASURING_PERFORMANCE ██░ 2/3        ⏳ MEASURING_PERFORMANCE ██░ 2/3 .      ⏳ MEASURING_PERFORMANCE ██░ 2/3 ..     ⏳ MEASURING_PERFORMANCE ██░ 2/3 ...    ⏳ MEASURING_PERFORMANCE ██░ 2/3        ⏳ MEASURING_PERFORMANCE ██░ 2/3 .      ⏳ MEASURING_PERFORMANCE ██░ 2/3 ..     ⏳ MEASURING_PERFORMANCE ██░ 2/3 ...    ⏳ MEASURING_PERFORMANCE ██░ 2/3        ⏳ MEASURING_PERFORMANCE ██░ 2/3 .      ⏳ MEASURING_PERFORMANCE ██░ 2/3 ..     ⏳ MEASURING_PERFORMANCE ██░ 2/3 ...    ⏳ MEASURING_PERFORMANCE ██░ 2/3        ⏳ MEASURING_PERFORMANCE ██░ 2/3 .      ⏳ MEASURING_PERFORMANCE ██░ 2/3 ..     ⏳ MEASURING_PERFORMANCE ██░ 2/3 ...    ⏳ MEASURING_PERFORMANCE ██░ 2/3        ⏳ MEASURING_PERFORMANCE ██░ 2/3 .      ⏳ MEASURING_PERFORMANCE ██░ 2/3 ..     ⏳ MEASURING_PERFORMANCE ██░ 2/3 ...    ⏳ MEASURING_PERFORMANCE ██░ 2/3        ⏳ MEASURING_PERFORMANCE ██░ 2/3 .      ⏳ MEASURING_PERFORMANCE ██░ 2/3 ..     ⏳ MEASURING_PERFORMANCE ██░ 2/3 ...    ⏳ MEASURING_PERFORMANCE ██░ 2/3        ⏳ MEASURING_PERFORMANCE ██░ 2/3 .      ⏳ MEASURING_PERFORMANCE ██░ 2/3 ..     ⏳ MEASURING_PERFORMANCE ██░ 2/3 ...    ⏳ MEASURING_PERFORMANCE ██░ 2/3        ⏳ MEASURING_PERFORMANCE ██░ 2/3 .      ⏳ MEASURING_PERFORMANCE ██░ 2/3 ..     ⏳ MEASURING_PERFORMANCE ██░ 2/3 ...    ⏳ MEASURING_PERFORMANCE ██░ 2/3        ⏳ MEASURING_PERFORMANCE ██░ 2/3 .      ⏳ MEASURING_PERFORMANCE ██░ 2/3 ..     ⏳ MEASURING_PERFORMANCE ██░ 2/3 ...    ⏳ MEASURING_PERFORMANCE ██░ 2/3        ⏳ MEASURING_PERFORMANCE ██░ 2/3 .      ⏳ MEASURING_PERFORMANCE ██░ 2/3 ..     ⏳ MEASURING_PERFORMANCE ██░ 2/3 ...    ⏳ MEASURING_PERFORMANCE ██░ 2/3        ⏳ MEASURING_PERFORMANCE ██░ 2/3 .      ⏳ MEASURING_PERFORMANCE ██░ 2/3 ..     ⏳ MEASURING_PERFORMANCE ██░ 2/3 ...    ⏳ MEASURING_PERFORMANCE ██░ 2/3        ⏳ MEASURING_PERFORMANCE ██░ 2/3 .      ⏳ MEASURING_PERFORMANCE ██░ 2/3 ..     ⏳ MEASURING_PERFORMANCE ██░ 2/3 ...    ⏳ MEASURING_PERFORMANCE ██░ 2/3        ⏳ MEASURING_PERFORMANCE ██░ 2/3 .      ⏳ MEASURING_PERFORMANCE ██░ 2/3 ..     ⏳ MEASURING_PERFORMANCE ██░ 2/3 ...    ⏳ MEASURING_PERFORMANCE ██░ 2/3        ⏳ MEASURING_PERFORMANCE ██░ 2/3 .      ✅ SUCCESS                          
+[12:00:34] profile_int8: JobStatus
+---------
+code    : SUCCESS
+message : 
+
+[12:00:34] profile_fp32: submitted -> https://workbench.aihub.qualcomm.com/jobs/jpe7e7j75/
+[12:00:34] profile_fp32: JobStatus
+---------
+code    : SUCCESS
+message : 
+
+{
+ "device": "Samsung Galaxy S24 (Family)",
+ "model": "torchvision mobilenet_v2 IMAGENET1K_V1",
+ "job_compile_onnx_fp32": "https://workbench.aihub.qualcomm.com/jobs/jp0m3mn2g/",
+ "calibration": "100 imagenette images",
+ "job_quantize": "https://workbench.aihub.qualcomm.com/jobs/jp8e0elzp/",
+ "job_compile_tflite_int8": "https://workbench.aihub.qualcomm.com/jobs/jp3zvzyx5/",
+ "job_compile_tflite_fp32": "https://workbench.aihub.qualcomm.com/jobs/jgolklj4g/",
+ "int8": {
+  "job": "https://workbench.aihub.qualcomm.com/jobs/jgjrzrj7p/",
+  "device_actual": "Device(name='Samsung Galaxy S24 (Family)', os='14', attributes=['os:android', 'framework:tflite', 'framework:onnx', 'abi:aarch64-android', 'vendor:samsung', 'format:phone', 'chipset:qualcomm-snapdragon-8gen3', 'chipset:sm8650', 'hexagon:v75', 'soc-model:57', 'htp-supports-fp16:true', 'htp-supports-weight-sharing:true', 'framework:qnn'])",
+  "estimated_inference_time": 282,
+  "estimated_inference_peak_memory": 149278720,
+  "first_load_time": 588970,
+  "first_load_peak_memory": 162500608,
+  "warm_load_time": 159304,
+  "warm_load_peak_memory": 171933696,
+  "compile_time": 0,
+  "compile_peak_memory": 0,
+  "layers_by_compute_unit": {
+   "NPU": 105
+  }
+ },
+ "fp32": {
+  "job": "https://workbench.aihub.qualcomm.com/jobs/jpe7e7j75/",
+  "device_actual": "Device(name='Samsung Galaxy S24 (Family)', os='14', attributes=['os:android', 'framework:tflite', 'framework:onnx', 'abi:aarch64-android', 'vendor:samsung', 'format:phone', 'chipset:qualcomm-snapdragon-8gen3', 'chipset:sm8650', 'hexagon:v75', 'soc-model:57', 'htp-supports-fp16:true', 'htp-supports-weight-sharing:true', 'framework:qnn'])",
+  "estimated_inference_time": 369,
+  "estimated_inference_peak_memory": 210489344,
+  "first_load_time": 537560,
+  "first_load_peak_memory": 189030400,
+  "warm_load_time": 159339,
+  "warm_load_peak_memory": 211144704,
+  "compile_time": 0,
+  "compile_peak_memory": 0,
+  "layers_by_compute_unit": {
+   "NPU": 70
+  }
+ }
+}
+
+==================== SUMMARY ====================
+Device : Samsung Galaxy S24 (Family)
+Model  : MobileNetV2 (torchvision, 1x3x224x224)
+
+FP32 TFLite  ->  https://workbench.aihub.qualcomm.com/jobs/jpe7e7j75/
+  estimated_inference_time         0.37 ms
+  first_load_time                  537.56 ms
+  warm_load_time                   159.34 ms
+  estimated_inference_peak_memory  210.5 MB
+  layers by compute unit           {'NPU': 70}
+
+INT8 TFLite  ->  https://workbench.aihub.qualcomm.com/jobs/jgjrzrj7p/
+  estimated_inference_time         0.28 ms
+  first_load_time                  588.97 ms
+  warm_load_time                   159.30 ms
+  estimated_inference_peak_memory  149.3 MB
+  layers by compute unit           {'NPU': 105}
+
+INT8 speedup vs FP32: 1.31x
+=================================================
+=== END rc=0 Sat Sep 12 12:00:35 PDT 2026

@@ -1,0 +1,645 @@
+{
+ "execution_summary": {
+  "estimated_inference_time": 369,
+  "estimated_inference_peak_memory": 210489344,
+  "first_load_time": 537560,
+  "first_load_peak_memory": 189030400,
+  "warm_load_time": 159339,
+  "warm_load_peak_memory": 211144704,
+  "compile_time": 0,
+  "compile_peak_memory": 0,
+  "compile_memory_increase_range": [
+   0,
+   0
+  ],
+  "compile_memory_peak_range": [
+   0,
+   0
+  ],
+  "first_load_memory_increase_range": [
+   77416256,
+   84556352
+  ],
+  "first_load_memory_peak_range": [
+   94273536,
+   101413632
+  ],
+  "warm_load_memory_increase_range": [
+   0,
+   1427776
+  ],
+  "warm_load_memory_peak_range": [
+   368640,
+   55488080
+  ],
+  "inference_memory_increase_range": [
+   0,
+   33264
+  ],
+  "inference_memory_peak_range": [
+   12288,
+   53572016
+  ],
+  "all_compile_times": [],
+  "all_first_load_times": [
+   537560
+  ],
+  "all_warm_load_times": [
+   159339
+  ],
+  "all_inference_times": [
+   12688,
+   438,
+   407,
+   403,
+   402,
+   399,
+   398,
+   395,
+   406,
+   526,
+   401,
+   732,
+   490,
+   474,
+   471,
+   475,
+   461,
+   402,
+   397,
+   402,
+   399,
+   393,
+   400,
+   398,
+   398,
+   396,
+   401,
+   399,
+   400,
+   401,
+   398,
+   396,
+   400,
+   400,
+   397,
+   399,
+   406,
+   397,
+   382,
+   381,
+   381,
+   379,
+   379,
+   381,
+   381,
+   380,
+   381,
+   385,
+   391,
+   380,
+   387,
+   380,
+   382,
+   386,
+   380,
+   380,
+   382,
+   387,
+   386,
+   369,
+   373,
+   373,
+   370,
+   372,
+   373,
+   372,
+   371,
+   372,
+   371,
+   372,
+   371,
+   373,
+   374,
+   371,
+   372,
+   374,
+   373,
+   373,
+   373,
+   371,
+   371,
+   372,
+   373,
+   372,
+   370,
+   374,
+   371,
+   371,
+   372,
+   372,
+   370,
+   374,
+   372,
+   372,
+   371,
+   373,
+   371,
+   372,
+   371,
+   403
+  ]
+ },
+ "execution_detail": [
+  {
+   "name": "model/tf.compat.v1.transpose/transpose",
+   "type": "TRANSPOSE",
+   "compute_unit": "NPU",
+   "execution_time": 107,
+   "execution_cycles": 196708
+  },
+  {
+   "name": "model/tf.compat.v1.pad/Pad",
+   "type": "PAD",
+   "compute_unit": "NPU",
+   "execution_time": 0,
+   "execution_cycles": 0
+  },
+  {
+   "name": "model/dynamic_conv2d/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 183,
+   "execution_cycles": 337961
+  },
+  {
+   "name": "model/node_Conv_239/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 13,
+   "execution_cycles": 23315
+  },
+  {
+   "name": "model/dynamic_conv2d_1/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 4,
+   "execution_cycles": 7393
+  },
+  {
+   "name": "model/dynamic_conv2d_2/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 19,
+   "execution_cycles": 35349
+  },
+  {
+   "name": "model/tf.compat.v1.pad_1/Pad",
+   "type": "PAD",
+   "compute_unit": "NPU",
+   "execution_time": 0,
+   "execution_cycles": 0
+  },
+  {
+   "name": "model/node_Conv_242/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 131,
+   "execution_cycles": 241997
+  },
+  {
+   "name": "model/dynamic_conv2d_3/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 2,
+   "execution_cycles": 3581
+  },
+  {
+   "name": "model/dynamic_conv2d_4/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 8,
+   "execution_cycles": 14046
+  },
+  {
+   "name": "model/node_Conv_245/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 16,
+   "execution_cycles": 29481
+  },
+  {
+   "name": "model/dynamic_conv2d_5/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 2,
+   "execution_cycles": 4452
+  },
+  {
+   "name": "model/tf.math.add_9/Add",
+   "type": "ADD",
+   "compute_unit": "NPU",
+   "execution_time": 1,
+   "execution_cycles": 2727
+  },
+  {
+   "name": "model/dynamic_conv2d_6/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 7,
+   "execution_cycles": 13702
+  },
+  {
+   "name": "model/tf.compat.v1.pad_2/Pad",
+   "type": "PAD",
+   "compute_unit": "NPU",
+   "execution_time": 0,
+   "execution_cycles": 0
+  },
+  {
+   "name": "model/node_Conv_248/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 64,
+   "execution_cycles": 117908
+  },
+  {
+   "name": "model/dynamic_conv2d_7/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 1,
+   "execution_cycles": 2514
+  },
+  {
+   "name": "model/dynamic_conv2d_8/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 3,
+   "execution_cycles": 4966
+  },
+  {
+   "name": "model/node_Conv_251/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 6,
+   "execution_cycles": 11880
+  },
+  {
+   "name": "model/dynamic_conv2d_9/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 1,
+   "execution_cycles": 1905
+  },
+  {
+   "name": "model/tf.math.add_16/Add",
+   "type": "ADD",
+   "compute_unit": "NPU",
+   "execution_time": 1,
+   "execution_cycles": 1247
+  },
+  {
+   "name": "model/dynamic_conv2d_10/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 3,
+   "execution_cycles": 4934
+  },
+  {
+   "name": "model/node_Conv_254/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 6,
+   "execution_cycles": 11680
+  },
+  {
+   "name": "model/dynamic_conv2d_11/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 1,
+   "execution_cycles": 1814
+  },
+  {
+   "name": "model/tf.math.add_20/Add",
+   "type": "ADD",
+   "compute_unit": "NPU",
+   "execution_time": 0,
+   "execution_cycles": 848
+  },
+  {
+   "name": "model/dynamic_conv2d_12/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 3,
+   "execution_cycles": 4981
+  },
+  {
+   "name": "model/tf.compat.v1.pad_3/Pad",
+   "type": "PAD",
+   "compute_unit": "NPU",
+   "execution_time": 0,
+   "execution_cycles": 0
+  },
+  {
+   "name": "model/node_Conv_257/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 24,
+   "execution_cycles": 44839
+  },
+  {
+   "name": "model/dynamic_conv2d_13/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 1,
+   "execution_cycles": 1353
+  },
+  {
+   "name": "model/dynamic_conv2d_14/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 2,
+   "execution_cycles": 4070
+  },
+  {
+   "name": "model/node_Conv_260/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 5,
+   "execution_cycles": 8947
+  },
+  {
+   "name": "model/dynamic_conv2d_15/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 1,
+   "execution_cycles": 1956
+  },
+  {
+   "name": "model/tf.math.add_27/Add",
+   "type": "ADD",
+   "compute_unit": "NPU",
+   "execution_time": 0,
+   "execution_cycles": 598
+  },
+  {
+   "name": "model/dynamic_conv2d_16/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 2,
+   "execution_cycles": 3624
+  },
+  {
+   "name": "model/node_Conv_263/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 5,
+   "execution_cycles": 8596
+  },
+  {
+   "name": "model/dynamic_conv2d_17/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 1,
+   "execution_cycles": 1947
+  },
+  {
+   "name": "model/tf.math.add_31/Add",
+   "type": "ADD",
+   "compute_unit": "NPU",
+   "execution_time": 0,
+   "execution_cycles": 567
+  },
+  {
+   "name": "model/dynamic_conv2d_18/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 2,
+   "execution_cycles": 3609
+  },
+  {
+   "name": "model/node_Conv_266/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 5,
+   "execution_cycles": 8692
+  },
+  {
+   "name": "model/dynamic_conv2d_19/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 1,
+   "execution_cycles": 1976
+  },
+  {
+   "name": "model/tf.math.add_35/Add",
+   "type": "ADD",
+   "compute_unit": "NPU",
+   "execution_time": 0,
+   "execution_cycles": 601
+  },
+  {
+   "name": "model/dynamic_conv2d_20/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 2,
+   "execution_cycles": 3645
+  },
+  {
+   "name": "model/node_Conv_269/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 5,
+   "execution_cycles": 8837
+  },
+  {
+   "name": "model/dynamic_conv2d_21/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 2,
+   "execution_cycles": 2842
+  },
+  {
+   "name": "model/dynamic_conv2d_22/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 4,
+   "execution_cycles": 6911
+  },
+  {
+   "name": "model/node_Conv_272/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 7,
+   "execution_cycles": 13120
+  },
+  {
+   "name": "model/dynamic_conv2d_23/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 2,
+   "execution_cycles": 3947
+  },
+  {
+   "name": "model/tf.math.add_42/Add",
+   "type": "ADD",
+   "compute_unit": "NPU",
+   "execution_time": 0,
+   "execution_cycles": 848
+  },
+  {
+   "name": "model/dynamic_conv2d_24/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 4,
+   "execution_cycles": 6990
+  },
+  {
+   "name": "model/node_Conv_275/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 7,
+   "execution_cycles": 13104
+  },
+  {
+   "name": "model/dynamic_conv2d_25/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 2,
+   "execution_cycles": 3935
+  },
+  {
+   "name": "model/tf.math.add_46/Add",
+   "type": "ADD",
+   "compute_unit": "NPU",
+   "execution_time": 0,
+   "execution_cycles": 879
+  },
+  {
+   "name": "model/dynamic_conv2d_26/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 4,
+   "execution_cycles": 7194
+  },
+  {
+   "name": "model/tf.compat.v1.pad_4/Pad",
+   "type": "PAD",
+   "compute_unit": "NPU",
+   "execution_time": 0,
+   "execution_cycles": 0
+  },
+  {
+   "name": "model/node_Conv_278/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 22,
+   "execution_cycles": 40386
+  },
+  {
+   "name": "model/dynamic_conv2d_27/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 1,
+   "execution_cycles": 2121
+  },
+  {
+   "name": "model/dynamic_conv2d_28/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 3,
+   "execution_cycles": 5166
+  },
+  {
+   "name": "model/node_Conv_281/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 4,
+   "execution_cycles": 7466
+  },
+  {
+   "name": "model/dynamic_conv2d_29/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 2,
+   "execution_cycles": 2817
+  },
+  {
+   "name": "model/tf.math.add_53/Add",
+   "type": "ADD",
+   "compute_unit": "NPU",
+   "execution_time": 0,
+   "execution_cycles": 602
+  },
+  {
+   "name": "model/dynamic_conv2d_30/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 3,
+   "execution_cycles": 5669
+  },
+  {
+   "name": "model/node_Conv_284/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 4,
+   "execution_cycles": 7364
+  },
+  {
+   "name": "model/dynamic_conv2d_31/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 2,
+   "execution_cycles": 2770
+  },
+  {
+   "name": "model/tf.math.add_57/Add",
+   "type": "ADD",
+   "compute_unit": "NPU",
+   "execution_time": 0,
+   "execution_cycles": 614
+  },
+  {
+   "name": "model/dynamic_conv2d_32/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 3,
+   "execution_cycles": 5443
+  },
+  {
+   "name": "model/node_Conv_287/depthwise",
+   "type": "DEPTHWISE_CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 4,
+   "execution_cycles": 7234
+  },
+  {
+   "name": "model/dynamic_conv2d_33/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 4,
+   "execution_cycles": 6703
+  },
+  {
+   "name": "model/dynamic_conv2d_34/DynamicConv2D",
+   "type": "CONV_2D",
+   "compute_unit": "NPU",
+   "execution_time": 6,
+   "execution_cycles": 10704
+  },
+  {
+   "name": "model/tf.math.reduce_mean/Mean",
+   "type": "MEAN",
+   "compute_unit": "NPU",
+   "execution_time": 8,
+   "execution_cycles": 15166
+  },
+  {
+   "name": "output_0",
+   "type": "FULLY_CONNECTED",
+   "compute_unit": "NPU",
+   "execution_time": 9,
+   "execution_cycles": 16119
+  }
+ ]
+}
