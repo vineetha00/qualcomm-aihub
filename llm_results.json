@@ -1,0 +1,131 @@
+{
+ "model": "Qwen3-0.6B W4A16 (SpinQuant+AdaScale, int4 weights / int16 act / int8 KV)",
+ "runtime": "QNN/QAIRT context binaries (geniex_qairt)",
+ "device": "Samsung Galaxy S25 (Family)",
+ "graphs": {
+  "token_1_4096_2": {
+   "job": "https://workbench.aihub.qualcomm.com/jobs/jpxrnjx1p/",
+   "device": "Samsung Galaxy S25 (Family)",
+   "n_parts": 2,
+   "inference_us": 24776,
+   "peak_mem_bytes": 554930176,
+   "first_load_us": 257135,
+   "warm_load_us": 248926,
+   "units": {
+    "NPU": 13446
+   }
+  },
+  "token_1_1024_2": {
+   "job": "https://workbench.aihub.qualcomm.com/jobs/jp44ko3vp/",
+   "device": "Samsung Galaxy S25 (Family)",
+   "n_parts": 2,
+   "inference_us": 10255,
+   "peak_mem_bytes": 214822912,
+   "first_load_us": 208590,
+   "warm_load_us": 204474,
+   "units": {
+    "NPU": 13446
+   }
+  },
+  "prompt_128_4096_2": {
+   "job": "https://workbench.aihub.qualcomm.com/jobs/j57n0w9lp/",
+   "device": "Samsung Galaxy S25 (Family)",
+   "n_parts": 2,
+   "inference_us": 40212,
+   "peak_mem_bytes": 552423424,
+   "first_load_us": 273752,
+   "warm_load_us": 274080,
+   "units": {
+    "NPU": 14175
+   }
+  },
+  "prompt_128_1024_2": {
+   "job": "https://workbench.aihub.qualcomm.com/jobs/jgd4e92eg/",
+   "device": "Samsung Galaxy S25 (Family)",
+   "n_parts": 2,
+   "inference_us": 18490,
+   "peak_mem_bytes": 236351488,
+   "first_load_us": 227680,
+   "warm_load_us": 218944,
+   "units": {
+    "NPU": 14175
+   }
+  },
+  "token_1_4096_1": {
+   "job": "https://workbench.aihub.qualcomm.com/jobs/jg92j1dlp/",
+   "device": "Samsung Galaxy S25 (Family)",
+   "n_parts": 2,
+   "inference_us": 34,
+   "peak_mem_bytes": 103923712,
+   "first_load_us": 135923,
+   "warm_load_us": 139250,
+   "units": {
+    "NPU": 3
+   }
+  },
+  "token_1_1024_1": {
+   "job": "https://workbench.aihub.qualcomm.com/jobs/j5wz2v465/",
+   "device": "Samsung Galaxy S25 (Family)",
+   "n_parts": 2,
+   "inference_us": 40,
+   "peak_mem_bytes": 103890944,
+   "first_load_us": 140090,
+   "warm_load_us": 136341,
+   "units": {
+    "NPU": 3
+   }
+  },
+  "prompt_128_4096_1": {
+   "job": "https://workbench.aihub.qualcomm.com/jobs/jgzyo94kp/",
+   "device": "Samsung Galaxy S25 (Family)",
+   "n_parts": 2,
+   "inference_us": 68,
+   "peak_mem_bytes": 103469056,
+   "first_load_us": 138607,
+   "warm_load_us": 132745,
+   "units": {
+    "NPU": 3
+   }
+  },
+  "prompt_128_1024_1": {
+   "job": "https://workbench.aihub.qualcomm.com/jobs/jgjyzmwxg/",
+   "device": "Samsung Galaxy S25 (Family)",
+   "n_parts": 2,
+   "inference_us": 81,
+   "peak_mem_bytes": 103718912,
+   "first_load_us": 136165,
+   "warm_load_us": 138876,
+   "units": {
+    "NPU": 3
+   }
+  }
+ },
+ "per_context": {
+  "1024": {
+   "decode_step_ms": 10.295,
+   "decode_tokens_per_s": 97.13453132588636,
+   "prefill_chunk_ms": 18.571,
+   "prefill_tokens_per_s": 6892.466749232674,
+   "ttft_ms_prompt_le_128": 28.866,
+   "peak_mem_MB_sum_of_parts_decode": 318.713856,
+   "peak_mem_MB_max_graph": 236.351488,
+   "layers_by_compute_unit": {
+    "NPU": 27627
+   },
+   "npu_residency": 1.0
+  },
+  "4096": {
+   "decode_step_ms": 24.81,
+   "decode_tokens_per_s": 40.30632809351068,
+   "prefill_chunk_ms": 40.28,
+   "prefill_tokens_per_s": 3177.7557100297913,
+   "ttft_ms_prompt_le_128": 65.09,
+   "peak_mem_MB_sum_of_parts_decode": 658.853888,
+   "peak_mem_MB_max_graph": 554.930176,
+   "layers_by_compute_unit": {
+    "NPU": 27627
+   },
+   "npu_residency": 1.0
+  }
+ }
+}

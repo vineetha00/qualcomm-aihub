@@ -34,15 +34,50 @@ AI Hub jobs: [FP32 ONNX compile](https://workbench.aihub.qualcomm.com/jobs/jp0m3
 
 Raw outputs: `results.json`, `profile_int8.json`, `profile_fp32.json`, `accuracy_results.json`, `run.log`, `eval.log`.
 
-## 2. Qwen3-0.6B W4A16 LLM on Snapdragon 8 Elite via QNN (in progress)
+## 2. Qwen3-0.6B W4A16 LLM on Snapdragon 8 Elite via QNN
 
-**Target:** Samsung Galaxy S25 (Snapdragon 8 Elite). **Pipeline** (`run_llm.sh`):
-`qai-hub-models export qwen3_0_6b --checkpoint DEFAULT_W4A16 --runtime geniex_qairt` —
-int4 weights / int16 activations / int8 KV cache (SpinQuant + AdaScale recipe), split into
-prompt-processor and token-generator graphs at 1024 and 4096 context, compiled and linked
-into QNN (QAIRT) context binaries, each graph profiled on device. `llm_metrics.py` derives
-decode tok/s, prefill tok/s, TTFT, peak memory and NPU residency from the per-graph profiles →
-`llm_results.json`. Results will be added here when the run completes.
+**Target:** Samsung Galaxy S25 (Snapdragon 8 Elite for Galaxy, Hexagon NPU), QNN/QAIRT context binaries
+(`geniex_qairt` runtime). **Pipeline** (`run_llm.sh`, 77 min end-to-end on a MacBook Air + AI Hub):
+`qai-hub-models export qwen3_0_6b --checkpoint DEFAULT_W4A16 --runtime geniex_qairt --context-lengths 1024,4096`
+— Qualcomm's pre-quantized checkpoint (int4 per-channel weights, int16 activations, int8 KV cache,
+int8 LM head; SpinQuant R2+R3 → AdaScale → calibration recipe), split into 2 parts (embedding / 28 layers +
+LM head) × {prompt processor AR=128, token generator AR=1} × {1024, 4096 context} = 8 graphs, compiled and
+linked into QNN context binaries, each graph profiled on the device. `llm_metrics.py` turns the per-graph
+profiles into end-to-end figures → `llm_results.json`.
+
+| Context length | 1024 | 4096 |
+|---|---|---|
+| Decode step (sum of parts) | 10.30 ms | 24.81 ms |
+| **Decode throughput** | **97.1 tok/s** | **40.3 tok/s** |
+| Prefill (128-token chunk) | 18.6 ms → 6,890 tok/s | 40.3 ms → 3,180 tok/s |
+| Time-to-first-token (prompt ≤ 128 tok) | 29 ms | 65 ms |
+| Peak memory, decode (sum of parts) | 319 MB | 659 MB |
+| Peak memory, largest graph | 236 MB | 555 MB |
+| Ops on NPU / GPU / CPU | 27,627 / 0 / 0 (**100% NPU**) | 27,627 / 0 / 0 (**100% NPU**) |
+| Context-binary size on disk | 714 MB (both parts, shared) | |
+
+Reference: Qualcomm's published `geniex_qairt` numbers for the same model on Galaxy S25 are 79.9 tok/s
+(cl 1024) and 48.7 tok/s (cl 4096). Ours are derived from on-device NPU graph latency via profile jobs,
+so they exclude runtime overhead (sampling, tokenizer, IPC) and assume a full-length KV cache; expect
+end-to-end Genie/GenieX throughput to land a bit lower at short context and similar at long context.
+The 2.4× decode slowdown from 1024 → 4096 context is the KV-cache attention cost at this model size.
+
+AI Hub jobs (Galaxy S25): token generator cl1024 [part 1](https://workbench.aihub.qualcomm.com/jobs/j5wz2v465/) ·
+[part 2](https://workbench.aihub.qualcomm.com/jobs/jp44ko3vp/); token generator cl4096
+[part 1](https://workbench.aihub.qualcomm.com/jobs/jg92j1dlp/) · [part 2](https://workbench.aihub.qualcomm.com/jobs/jpxrnjx1p/);
+prompt processor cl1024 [part 1](https://workbench.aihub.qualcomm.com/jobs/jgjyzmwxg/) ·
+[part 2](https://workbench.aihub.qualcomm.com/jobs/jgd4e92eg/); prompt processor cl4096
+[part 1](https://workbench.aihub.qualcomm.com/jobs/jgzyo94kp/) · [part 2](https://workbench.aihub.qualcomm.com/jobs/j57n0w9lp/);
+link jobs [part 1](https://workbench.aihub.qualcomm.com/jobs/jp11y072p/) · [part 2](https://workbench.aihub.qualcomm.com/jobs/jgd4ew8eg/).
+
+Raw outputs: `llm_results.json`, `llm_export.log`. The exported Genie bundle (`llm_export/…/part{1,2}_of_2.bin`,
+`genie_config.json`, tokenizer) is not committed (714 MB) but is what `genie-t2t-run` / GenieX load on a phone.
+
+### Why not Llama 3.2 1B, and why not the Galaxy S24?
+Qualcomm's LLM recipes in `qai-hub-models` 0.65 target Snapdragon 8 Elite and newer only (Hexagon v79+),
+so the 8 Gen 3 used in experiment 1 is not a supported LLM target. Llama 3.2 1B is also available but is
+license-gated on Hugging Face and its export recipe wants ~50 GB host RAM (3 splits); Qwen3-0.6B needs 8 GB
+and is Apache-2.0, so it is the one that runs on a laptop.
 
 ## Reproduce
 
@@ -52,5 +87,5 @@ pip install qai-hub torch torchvision onnx pillow numpy ai-edge-litert
 qai-hub configure --api_token <your AI Hub token>
 python aihub_mobilenet_int8.py      # ~10 min: quantize + compile + profile
 bash run_eval.sh                    # ~4 min: top-1 accuracy FP32 vs INT8
-bash run_llm.sh                     # ~1 h: Qwen3-0.6B W4A16 → QNN → profile on Galaxy S25
+bash run_llm.sh                     # ~75 min: Qwen3-0.6B W4A16 → QNN → profile on Galaxy S25
 ```
